@@ -25,7 +25,7 @@ class ProductRepository {
   async getAllProduct(qry: QueryType): Promise<PaginationType> {
     try {
       const page = qry.page || 1;
-      const limit = qry.page || 5;
+      const limit = qry.limit || 5;
       const sort = qry.sort || {};
       const filter = qry.filter || {};
       const skip = (page - 1) * limit;
